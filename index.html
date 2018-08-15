@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stripe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="card.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <form>
+        <label>
+            <input name="cardholder-name" class="field is-empty" placeholder="Jane Doe" />
+            <span><span>Name</span></span>
+          </label>
+        <label>
+            <input class="field is-empty" type="tel" placeholder="(123) 456-7890" />
+            <span><span>Phone number</span></span>
+          </label>
+        <label>
+            <div id="card-element" class="field is-empty"></div>
+            <span><span>Credit or debit card</span></span>
+          </label>
+        <button type="submit">Pay $25</button>
+        <div class="outcome">
+            <div class="error" role="alert"></div>
+            <div class="success">
+                Success! Your Stripe token is <span class="token"></span>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
